@@ -1,3 +1,96 @@
 body{
     background-image: url('img/hatter.jpg');
+    color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form{
+    background-color: rgb(0 0 0 / 0.3);
+    width: 600px;
+    height: 650px;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding-top: 20px;
+}
+
+#eletkor{
+    width: 50px;
+}
+
+#agazatdiv{
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: rgb(255 110 120 / 0.3);
+    border: 1px solid blue;
+    border-radius: 15px;
+
+}
+
+.label{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.szovegdoboz{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.jobbra{
+    position: fixed;
+    right: 0px;
+    top: 10px;
+}
+
+.agazatbox{
+    transform: scale(2);
+    margin-left: 10px;
+    accent-color: rgb(38, 172, 172);
+}
+
+.agazatbox:hover{
+    accent-color: lightblue;
+}
+
+.cbtext{
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: white;
+}
+
+#regisztral{
+    margin-top: 30px;
+    width: 160px;
+    height: 50px;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    transition: 0.3s;
+}
+
+#regisztral:hover{
+    background-color: darkblue;
+    color: white;
+    border-color: black;
+}
+
+#gombdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#agazattext{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+table{
+    margin: auto;
 }

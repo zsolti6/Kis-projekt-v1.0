@@ -14,23 +14,69 @@
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link text-light mr-1 btn btn-outline-primary" href="#">Kezdőlap</a>
-            </li>
-            <li class="nav-item"></li>
-              <a class="nav-link text-light mr-1 btn btn-outline-primary" href="#">Hasznos információk</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light mr-1 btn btn-outline-primary" href="#">Elérhetőség</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-success my-2 my-sm-0 mr-1" type="submit">Belépés</button>
-            <button class="btn btn-outline-success my-2 my-sm-0 mr-1" type="submit">Regisztráció</button>
+          <form class="form-inline my-2 my-lg-0 mx-auto">
+            <button class="btn btn-outline-success my-2 my-sm-0 mr-1 jobbra" type="submit">Belépés</button>
           </form>
         </div>
       </nav>
-        <script src="script.js"></script>
+      <div class="container" id="form">
+        <form action="" method="get">
+          <div id="nevdiv">
+            <label class="label" for="nev">Teljes név</label><br>
+            <input class="szovegdoboz" type="text" name="nev" id="nev" placeholder="Adja meg a teljes nevét">
+          </div>
+          <div id="emaildiv">
+            <label class="label" for="email">E-mail cím</label><br>
+            <input class="szovegdoboz" type="email" name="email" id="email" placeholder="Adja meg az e-mail címét">
+          </div>
+          <div id="nemdiv">
+            <label class="label" for="nem">Nem kiválasztása</label><br>
+            <input type="radio" name="nem" id="ferfi">Férfi</input>
+            <input type="radio" name="nem" id="no">Nő</input>
+          </div>
+          <div id="eletkordiv">
+            <label class="label" for="eletkor">Életkor:</label>
+            <select name="eletkor" id="eletkor">
+              <option value="asd">18</option>
+            </select><br>
+          </div>
+          <div id="foglalkozasdiv">
+            <label class="label" for="foglalkozas">Foglalkozás</label><br>
+            <input class="szovegdoboz" type="text" name="foglalkozas" id="foglalkozas" placeholder="Adja meg a foglalkozását"><br>
+          </div>
+          <label class="label" id="agazattext" for="agazat">Ágazat</label><br>
+          <div id="agazatdiv">
+            <table>
+              <tr>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="gépipar" id="gepipar"><span class="cbtext">Gépipar</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="szépészet" id="szepeszet"/><span class="cbtext">Szépészet</span></input></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="gazdasági" id="gazdasagi"/><span class="cbtext">Gazdasági</span></input><br></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="jogi" id="jogi"/><span class="cbtext">Jogi</span></input></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="sport" id="sport"/><span class="cbtext">Sport</span></input><br></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="közlekedési" id="kozlekedesi"/><span class="cbtext">Közlekedési</span></input></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="építészeti" id="epiteszeti"/><span class="cbtext">Építészeti</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="informatika" id="informatika"/><span class="cbtext">Informatika</span></input></td>
+              </tr>
+            </table>
+            
+            
+            
+            
+            
+            
+            
+          </div>
+          <div id="gombdiv">
+            <input type="button" id="regisztral" value="Regisztráció" onclick="regisztral()">
+          </div>
+        </form>
+      </div>
+      <script src="script.js"></script>
     </body>
 </html>
