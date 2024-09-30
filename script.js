@@ -1,14 +1,32 @@
 window.addEventListener("load", () => {
-    for(var i = 1; i < 101; i++){
+    for(var i = 18; i < 101; i++){
         document.getElementById("eletkor").innerHTML += `<option value="${i}">${i}</option>`;
     }
     document.getElementById("eletkor").selectedIndex = -1;
 });
 
-function regisztral(){
-    alert("asd")
-    //let nev = document.getElementById("nev").value;
-    //console.log(nev);
+function reg(){
+    let nev = document.getElementById("nev").value;
+    let email = document.getElementById("email").value;
+    let nem;
+    document.getElementsByName("nem").forEach(x =>{
+        nem = x.checked ? x.value : nem;
+    });
+    let eletkor = Number(document.getElementById("eletkor").value);
+    let foglalkozas = document.getElementById("foglalkozas").value;
+    let agazatok = [];
+    document.getElementsByName("agazat").forEach(x =>{
+        if(x.checked){
+            agazatok.push(x.value);
+        }  
+    });
+    let jelszo1 = document.getElementById("jelszo1").value;
+    let jelszo2 = document.getElementById("jelszo2").value;
+    if(nev == "" || email == "" || nem == undefined || eletkor == 0 ||foglalkozas == "" || agazatok.length == 0 || jelszo1 == "" || jelszo2 == ""){
+        alert("Nincs minden mező kitöltve!");
+    }else{
+        
+    }
     
 }
 

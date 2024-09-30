@@ -48,9 +48,9 @@
                 <path fill-rule="evenodd" d="M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z"/>
               </svg>
               <label class="label" for="nem">Nem:</label>
-              <input type="radio" name="nem" id="ferfi">Férfi</input>
-              <input type="radio" name="nem" id="no">Nő</input>
-              <input type="radio" name="nem" id="egyeb">Egyéb</input>
+              <input type="radio" name="nem" value="férfi">Férfi</input>
+              <input type="radio" name="nem" value="nő">Nő</input>
+              <input type="radio" name="nem" value="egyéb">Egyéb</input>
             </div>
             <div id="eletkordiv">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-standing" viewBox="0 0 16 16">
@@ -75,20 +75,24 @@
           <div id="agazatdiv">
             <table>
               <tr>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="gépipar" id="gepipar"><span class="cbtext">Gépipar</span></input></td>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="szépészet" id="szepeszet"/><span class="cbtext">Szépészet</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="gépipar"><span class="cbtext">Gépipar</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="szépészet"/><span class="cbtext">Szépészet</span></input></td>
               </tr>
               <tr>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="gazdasági" id="gazdasagi"/><span class="cbtext">Gazdasági</span></input><br></td>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="jogi" id="jogi"/><span class="cbtext">Jogi</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="gazdasági"/><span class="cbtext">Gazdasági</span></input><br></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="jogi"/><span class="cbtext">Jogi</span></input></td>
               </tr>
               <tr>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="sport" id="sport"/><span class="cbtext">Sport</span></input><br></td>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="közlekedési" id="kozlekedesi"/><span class="cbtext">Közlekedési</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="sport"/><span class="cbtext">Sport</span></input><br></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="közlekedési"/><span class="cbtext">Közlekedési</span></input></td>
               </tr>
               <tr>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="építészeti" id="epiteszeti"/><span class="cbtext">Építészeti</span></input></td>
-                <td><input type="checkbox" class="agazatbox" name="agazat" value="informatika" id="informatika"/><span class="cbtext">Informatika</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="építészeti"/><span class="cbtext">Építészeti</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="informatika"/><span class="cbtext">Informatika</span></input></td>
+              </tr>
+              <tr></tr>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="oktatás"/><span class="cbtext">Oktatás</span></input></td>
+                <td><input type="checkbox" class="agazatbox" name="agazat" value="művészet"/><span class="cbtext">Művészet</span></input></td>
               </tr>
             </table>
           </div>
@@ -110,7 +114,7 @@
             </table>
           </div>
           <div id="gombdiv">
-            <input type="button" id="regisztral" value="Regisztráció" onclick="regisztral()">
+            <input type="button" id="regisztral" value="Regisztráció" onclick="reg()">
           </div>
         </form>
       </div>

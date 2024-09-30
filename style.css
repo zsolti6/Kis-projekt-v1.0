@@ -75,9 +75,9 @@ body{
 }
 
 #regisztral{
-    margin-top: 30px;
+    margin-top: 15px;
     width: 160px;
-    height: 50px;
+    height: 40px;
     font-size: 1.3rem;
     border-radius: 25px;
     background-color: lightblue;
@@ -115,7 +115,8 @@ table{
 .center{
     margin: auto;
     width: 80px;
-    margin-top: 20px;
+    margin-top: 0px;
+    height: 40px;
 }
 
 #nemdiv{
