@@ -47,15 +47,9 @@ function reg(e){
 }
 
 function general(){
-    let karakterek = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-    let jelszo = "";
-    
-    for (let i = 0; i < 10; i++) {
-        jelszo += karakterek[Math.floor(Math.random() * karakterek.length)];
-    }
-
-    document.getElementById("jelszo1").value = jelszo;
-    document.getElementById("jelszo2").value = jelszo;
+    let ujjelszo = generateStrongPassword();
+    document.getElementById("jelszo1").value = ujjelszo;
+    document.getElementById("jelszo2").value = ujjelszo;
 }
 
 function validateName(name) {
@@ -86,4 +80,30 @@ function validateName(name) {
   
     // Test the password against the regular expression
     return passwordRegex.test(password);
+  }
+
+  function generateStrongPassword(length = 12) {
+    const upperCaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowerCaseChars = 'abcdefghijklmnopqrstuvwxyz';
+    const specialChars = '!@#$%^&*';
+    const numberChars = '0123456789';
+  
+    // Ensure the password contains at least one of each required character type
+    const passwordArray = [
+      upperCaseChars[Math.floor(Math.random() * upperCaseChars.length)],
+      specialChars[Math.floor(Math.random() * specialChars.length)],
+      lowerCaseChars[Math.floor(Math.random() * lowerCaseChars.length)],
+      numberChars[Math.floor(Math.random() * numberChars.length)],
+    ];
+  
+    // Fill the rest of the password length with random characters from all sets
+    const allChars = upperCaseChars + lowerCaseChars + specialChars + numberChars;
+    for (let i = passwordArray.length; i < length; i++) {
+      passwordArray.push(allChars[Math.floor(Math.random() * allChars.length)]);
+    }
+  
+    // Shuffle the password array to ensure randomness
+    const shuffledPassword = passwordArray.sort(() => Math.random() - 0.5).join('');
+  
+    return shuffledPassword;
   }
